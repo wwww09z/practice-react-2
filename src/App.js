@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useCallback } from 'react';
 import './style.css';
 import UseCallbackChild from './components/UseCallbackChild';
+import List from './components/list/List';
 
 const masiveCalculation = (n) => {
   let result = 1;
@@ -33,6 +34,7 @@ export default function App() {
       />
       <p>Manually rerendered the page {manualReloadTime} times.</p>
       <UseCallbackChild onButtonClick={onButtonClick} />
+      <List n={n} />
     </div>
   );
 }
